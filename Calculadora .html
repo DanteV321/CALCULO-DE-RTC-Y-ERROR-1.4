@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo RTC-ERROR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background-color: #f4f4f9;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50; /* Fondo verde */
+            color: white; /* Texto blanco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049; /* Cambio de color al pasar el ratón */
+        }
+    </style>
+ 
+</head>
+<body>
+    <h1>Calculadora Avanzada</h1>
+    <script src="script.js" defer></script>
+
+    <div class="result">
+        <input id="multiplicador" type="number" placeholder="Multiplicador nominal">
+    </div>
+
+    <div class="result">
+        <input id="ia1Primario" type="number" placeholder="Ia1 Primario">
+        <input id="ia1Secundario" type="number" placeholder="Ia1 Secundario">
+        <p id="rtcIa1"></p>
+        <p id="errorIa1"></p>
+    </div>
+
+    <div class="result">
+        <input id="ic1Primario" type="number" placeholder="Ic1 Primario">
+        <input id="ic1Secundario" type="number" placeholder="Ic1 Secundario">
+        <p id="rtcIc1"></p>
+        <p id="errorIc1"></p>
+        <p id="errorProm1"></p>
+    </div>
+
+    <div class="result">
+        <input id="ia2Primario" type="number" placeholder="Ia2 Primario">
+        <input id="ia2Secundario" type="number" placeholder="Ia2 Secundario">
+        <p id="rtcIa2"></p>
+        <p id="errorIa2"></p>
+    </div>
+
+    <div class="result">
+        <input id="ic2Primario" type="number" placeholder="Ic2 Primario">
+        <input id="ic2Secundario" type="number" placeholder="Ic2 Secundario">
+        <p id="rtcIc2"></p>
+        <p id="errorIc2"></p>
+        <p id="errorProm2"></p>
+    </div>
+
+    <div class="result">
+        <p id="errorDeProm"></p>
+        <p id="multiplicadorEncontrado"></p>
+    </div>
+
+    <button onclick="clearFields()">Limpiar Campos</button>
+</body>
+</html>
